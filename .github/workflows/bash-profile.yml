@@ -38,8 +38,7 @@ jobs:
              
 # finding fish and installing if not included 
     - name: show fish shell
-      run: |
-        which fish
+      run: whereis fish
                   
 # what files exist under /usr/share             
 #    - name: listing share files
@@ -47,4 +46,4 @@ jobs:
 
 # changing shell to fish 
     - name: set fish as default shell
-      run: sudo chsh -s 'which fish'
+      run: sudo chsh -s /usr/share/fish
