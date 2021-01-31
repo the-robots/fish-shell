@@ -11,4 +11,7 @@ jobs:
       run: cat /etc/profile
     - name: show bash profile (if exists)
       run: cat ~/.bashrc
-    
+    - name: add fish binary location to /etc/shells
+      run: sudo echo "/usr/local/bin/fish" >> /etc/shells
+    - name: set fish as default shell
+      run: chsh -s 'which fish'
