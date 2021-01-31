@@ -54,12 +54,10 @@ jobs:
              
 # adding /usr/share to path
     - name: adding path 
-      run: set PATH="$PATH:/usr/share"              
+      run: | 
+        export PATH=$PATH:/usr/share
+        echo $PATH
 
-# showing path again
-    - name: what paths exist
-      run: echo $PATH
-             
 # testing fish shell
     - name: test version
       run: fish -v
