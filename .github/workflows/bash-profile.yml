@@ -40,8 +40,6 @@ jobs:
     - name: show fish shell
       run: |
         whereis fish
-        locate fish
-        which fish
 
 # changing shell to fish 
     - name: set fish as default shell
