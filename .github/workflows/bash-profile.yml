@@ -2,9 +2,9 @@ name: bashrc info
 on: [push]
        
 jobs:
-  job1:
+  basic bashrc:
     runs-on: ubuntu-latest
     steps: 
     - name: show bashrc output
-      run: cat /etc/bashrc
+      run: sudo cat /etc/bashrc
     
