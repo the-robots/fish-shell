@@ -40,8 +40,15 @@ jobs:
     - name: show fish shell
       run: |
         whereis fish
-    - name: listing share files
-      run: ls -lath /usr/share
+        
+# installing which
+    - name: install which binary
+      run: sudo apt install which
+             
+# what files exist under /usr/share             
+#    - name: listing share files
+#      run: ls -lath /usr/share
+
 # changing shell to fish 
     - name: set fish as default shell
-      run: sudo chsh -s 'whereis fish'
+      run: sudo chsh -s 'which fish'
