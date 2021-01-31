@@ -1,3 +1,3 @@
-An Action that allows changes to the fish shell
+An Action to change to the fish shell
 
 https://en.wikipedia.org/wiki/Fish_(Unix_shell)
