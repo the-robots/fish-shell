@@ -1,0 +1,10 @@
+on: [push]
+    
+    jobs: bash info
+      initial bash info
+      steps: 
+        - name: show info
+        - uses: actions/checkout@latest
+        - name: show bashrc output
+        - run: cat /etc/bashrc
+    
