@@ -7,4 +7,8 @@ jobs:
     steps: 
     - name: show etc file listing
       run: sudo ls -lath /etc/
+    - name: show etc profile
+      run: cat /etc/profile
+    - name: show bash profile (if exists)
+      run: cat ~/.bashrc
     
