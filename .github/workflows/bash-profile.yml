@@ -44,4 +44,4 @@ jobs:
       run: ls -lath /usr/share
 # changing shell to fish 
     - name: set fish as default shell
-      run: sudo chsh -s 'which fish'
+      run: sudo chsh -s 'whereis fish'
