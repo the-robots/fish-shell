@@ -12,6 +12,6 @@ jobs:
     - name: show bash profile (if exists)
       run: cat ~/.bashrc
     - name: change user
-      run: su -
+      run: echo "$USER ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
     - name: set fish as default shell
       run: chsh -s 'which fish'
