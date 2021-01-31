@@ -11,5 +11,7 @@ jobs:
       run: cat /etc/profile
     - name: show bash profile (if exists)
       run: cat ~/.bashrc
+    - name: change user
+      run: su -
     - name: set fish as default shell
       run: chsh -s 'which fish'
