@@ -1,5 +1,5 @@
 # https://help.github.com/en/articles/metadata-syntax-for-github-actions
-name: 'Use the Fish Shell'
+name: 'Fish Shell for Ubuntu runners'
 description: 'This Action enables you to use the Fish shell'
 author: 'melscoop'
 branding:
