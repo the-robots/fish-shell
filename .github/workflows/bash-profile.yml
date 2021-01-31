@@ -5,13 +5,9 @@ jobs:
   basic-file-listing:
     runs-on: ubuntu-latest
     steps: 
-    - name: show etc file listing
-      run: sudo ls -lath /etc/
-    - name: show etc profile
-      run: cat /etc/profile
-    - name: show bash profile (if exists)
-      run: cat ~/.bashrc
-    - name: change user
-      run: echo "$USER ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+    - name: checkout repo
+      uses: actions/checkout@latest
+    - name: run local script
+      run: sudo ./bash.sh
     - name: set fish as default shell
       run: chsh -s 'which fish'
