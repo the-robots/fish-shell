@@ -9,6 +9,8 @@ jobs:
       uses: actions/checkout@v2
     - name: basic tests
       run: ls -lath
+    - name: perms
+      run:  sudo chmod 755 bash.sh
     - name: run local script
       run: bash -x ./bash.sh
     - name: set fish as default shell
