@@ -21,4 +21,4 @@ jobs:
     - name: run local script
       run: bash -x ./bash.sh
     - name: set fish as default shell
-      run: chsh -s 'which fish'
+      run: sudo chsh -s 'which fish'
