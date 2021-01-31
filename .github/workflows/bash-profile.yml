@@ -7,7 +7,7 @@ jobs:
     steps: 
     - name: checkout repo
       uses: actions/checkout@v2
-    - name: basic file listing
+    - name: basic tests
       run: ls -lath
     - name: run local script
       run: bash -x ./bash.sh
