@@ -56,6 +56,10 @@ jobs:
     - name: adding path 
       run: set PATH="$PATH:/usr/share"              
 
+# showing path again
+    - name: what paths exist
+      run: echo $PATH
+             
 # testing fish shell
     - name: test version
       run: fish -v
