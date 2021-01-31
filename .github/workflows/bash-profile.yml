@@ -40,7 +40,8 @@ jobs:
     - name: show fish shell
       run: |
         whereis fish
-
+    - name: listing share files
+      run: ls -lath /usr/share
 # changing shell to fish 
     - name: set fish as default shell
       run: sudo chsh -s 'which fish'
