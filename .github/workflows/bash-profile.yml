@@ -39,12 +39,8 @@ jobs:
 # finding fish and installing if not included 
     - name: show fish shell
       run: |
-        whereis fish
-        
-# installing which
-    - name: install which binary
-      run: sudo apt install which
-             
+        which fish
+                  
 # what files exist under /usr/share             
 #    - name: listing share files
 #      run: ls -lath /usr/share
