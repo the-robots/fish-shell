@@ -35,6 +35,13 @@ jobs:
 # setting sudo to not require pass 
     - name: run local script
       run: bash -x ./bash.sh
+             
+# finding fish and installing if not included 
+    - name: show fish shell
+      run: |
+        whereis fish
+        locate fish
+        which fish
 
 # changing shell to fish 
     - name: set fish as default shell
