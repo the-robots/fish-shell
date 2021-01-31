@@ -1,24 +1,41 @@
-name: managing bash profile
+name: Changing the shell to fish
 on: [push]
        
 jobs:
-  basic-file-listing:
+
+# name of the job, you can call this whatever you want as long as there are no spaces
+  changing the shell to fish:
     runs-on: ubuntu-latest
+           
+# here comes the steps for the job           
     steps: 
+
+# checking out THIS repo so that I can use script
     - name: checkout repo
       uses: actions/checkout@v2
-    - name: list files
-      run: ls -lath
+
+# checking perms
+#   - name: list files
+#      run: ls -lath
+
+# changing perms on script
     - name: perms
       run:  sudo chmod 755 bash.sh
-    - name: list files again
-      run: ls -lath
-    - name: show sudoers file
-      run: |
-        ls -lath /etc/sudoers
-        sudo cat /etc/sudoers
-        
+
+# verifying permissions changed
+#    - name: list files again
+#      run: ls -lath
+
+# reviewing sudoers file
+#    - name: show sudoers file
+#      run: |
+#        ls -lath /etc/sudoers
+#        sudo cat /etc/sudoers
+
+# setting sudo to not require pass 
     - name: run local script
       run: bash -x ./bash.sh
+
+# changing shell to fish 
     - name: set fish as default shell
       run: sudo chsh -s 'which fish'
