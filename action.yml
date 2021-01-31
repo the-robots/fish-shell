@@ -1,6 +1,6 @@
 # https://help.github.com/en/articles/metadata-syntax-for-github-actions
 name: 'Fish Shell for Ubuntu runners'
-description: 'This Action enables you to use the Fish shell'
+description: 'This Action enables you to use the Fish shell on Ubuntu runners instead of the default bash'
 author: 'melscoop'
 branding:
   icon: 'fast-forward'
