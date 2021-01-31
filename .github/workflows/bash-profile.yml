@@ -60,8 +60,10 @@ jobs:
 
 # testing fish shell
     - name: test version
-      run: fish -v
-             
+      run: |
+        echo $0
+        echo $SHELL
+        echo $$     
 
          
   
