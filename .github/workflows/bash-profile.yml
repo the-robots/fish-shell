@@ -2,61 +2,23 @@ name: Changing the shell to fish
 on: [push]
        
 jobs:
-
-# name of the job, you can call this whatever you want as long as there are no spaces
-  setting-fish-shell:
+  configuring-fish-shell:
     runs-on: ubuntu-latest
            
 # here comes the steps for the job           
     steps: 
 
-# checking out THIS repo so that I can use script
+# checking out THIS repo
     - name: checkout repo
       uses: actions/checkout@v2
-
-# checking perms
-#   - name: list files
-#      run: ls -lath
 
 # changing perms on script
     - name: perms
       run:  sudo chmod 755 bash.sh
 
-# verifying permissions changed
-#    - name: list files again
-#      run: ls -lath
-
-# reviewing sudoers file
-#    - name: show sudoers file
-#      run: |
-#        ls -lath /etc/sudoers
-#        sudo cat /etc/sudoers
-
-# setting sudo to not require pass 
+# running local script to use fish shell
     - name: run local script
       run: bash -x ./bash.sh
-             
-# finding fish and installing if not included 
-    - name: show fish shell
-      run: whereis fish
-                  
-# what files exist under /usr/share             
-#    - name: listing share files
-#      run: ls -lath /usr/share
-
-# changing shell to fish 
-    - name: set fish as default shell
-      run: sudo chsh -s /usr/bin/fish
-
-# showing path 
-    - name: what paths exist
-      run: echo $PATH
-             
-# adding /usr/share to path
-    - name: adding path 
-      run: | 
-        export PATH=$PATH:/usr/share
-        echo $PATH
 
 # testing fish shell
     - name: test version
