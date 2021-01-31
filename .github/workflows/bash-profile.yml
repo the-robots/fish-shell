@@ -2,7 +2,7 @@ name: bashrc info
 on: [push]
        
 jobs:
-  basic bashrc:
+  basic-bashrc:
     runs-on: ubuntu-latest
     steps: 
     - name: show bashrc output
