@@ -1,10 +1,10 @@
-name: bashrc info
+name: managing bash profile
 on: [push]
        
 jobs:
-  basic-bashrc:
+  basic-file-listing:
     runs-on: ubuntu-latest
     steps: 
-    - name: show bashrc output
-      run: sudo cat /etc/bashrc
+    - name: show etc file listing
+      run: sudo ls -lath /etc/
     
