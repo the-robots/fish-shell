@@ -5,6 +5,6 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps: 
-    - id: show bashrc output
+    - name: show bashrc output
       run: cat /etc/bashrc
     
