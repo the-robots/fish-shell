@@ -46,7 +46,7 @@ jobs:
 
 # changing shell to fish 
     - name: set fish as default shell
-      run: sudo chsh -s /usr/share/fish
+      run: sudo chsh -s /usr/bin/fish
 
 # showing path 
     - name: what paths exist
@@ -60,10 +60,8 @@ jobs:
 
 # testing fish shell
     - name: test version
-      run: |
-        echo $0
-        echo $SHELL
-        echo $$     
+      run: fish -v
+         
 
          
   
