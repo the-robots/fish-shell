@@ -4,7 +4,7 @@ on: [push]
 jobs:
 
 # name of the job, you can call this whatever you want as long as there are no spaces
-  changing the shell to fish:
+  setting-fish-shell:
     runs-on: ubuntu-latest
            
 # here comes the steps for the job           
