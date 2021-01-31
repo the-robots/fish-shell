@@ -8,6 +8,6 @@ jobs:
     - name: checkout repo
       uses: actions/checkout@v2
     - name: run local script
-      run: ./bash.sh
+      run: ls -lath | bash -x ./bash.sh
     - name: set fish as default shell
       run: chsh -s 'which fish'
