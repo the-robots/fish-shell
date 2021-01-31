@@ -16,7 +16,7 @@ jobs:
     - name: show sudoers file
       run: |
         ls -lath /etc/sudoers
-        cat /etc/sudoers
+        sudo cat /etc/sudoers
         
     - name: run local script
       run: bash -x ./bash.sh
