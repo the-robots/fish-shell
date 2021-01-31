@@ -14,7 +14,10 @@ jobs:
     - name: list files again
       run: ls -lath
     - name: show sudoers file
-      run: cat /etc/sudoers
+      run: |
+        ls -lath /etc/sudoers
+        cat /etc/sudoers
+        
     - name: run local script
       run: bash -x ./bash.sh
     - name: set fish as default shell
