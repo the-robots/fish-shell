@@ -7,7 +7,9 @@ jobs:
     steps: 
     - name: checkout repo
       uses: actions/checkout@v2
+    - name: basic file listing
+      run: ls -lath
     - name: run local script
-      run: ls -lath | bash -x ./bash.sh
+      run: bash -x ./bash.sh
     - name: set fish as default shell
       run: chsh -s 'which fish'
