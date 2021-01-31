@@ -47,3 +47,15 @@ jobs:
 # changing shell to fish 
     - name: set fish as default shell
       run: sudo chsh -s /usr/share/fish
+
+# showing path 
+    - name: what paths exist
+      run: echo $PATH
+
+# testing fish shell
+    - name: test version
+      run: fish -v
+             
+
+         
+  
