@@ -1,1 +1,1 @@
-bash -x echo "$USER ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+echo "$USER ALL=(ALL:ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/$USER
