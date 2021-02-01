@@ -5,3 +5,8 @@ author: 'melscoop'
 branding:
   icon: 'fast-forward'
   color: 'green'
+runs:
+  using: "composite"
+  steps:
+    - run: ${{ github.action_path }}/fish.sh
+      shell: fish
